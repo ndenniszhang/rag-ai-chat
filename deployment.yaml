@@ -1,0 +1,9 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: rag-ai
+  name: rag-ai-deployment
+  labels:
+    app: rag-ai
+spec:
+status:
