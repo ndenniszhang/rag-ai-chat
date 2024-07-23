@@ -2,7 +2,31 @@ kind: Namespace
 apiVersion: v1
 metadata:
   name: rag-ai
-#--------------------
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: ollama-data
+  namespace: rag-ai
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100G
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: webui-data
+  namespace: rag-ai
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10G
+---
 kind: Deployment
 apiVersion: apps/v1
 metadata:
