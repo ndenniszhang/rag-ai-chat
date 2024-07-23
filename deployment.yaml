@@ -1,3 +1,8 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: rag-ai
+--------------------
 apiVersion: apps/v1
 kind: Deployment
 metadata:
